@@ -22,20 +22,19 @@ const namietkyVideo = document.querySelector(".namietky-video");
 
 const offerCardBtn3 = document.querySelector(".offer__card__more__btn.premium")
 const offerCardOther3 = document.querySelector(".offer__card__other.premium")
-const videos = ["/videos/nemam-cas.webm", "/videos/technicky-typ.webm", "/videos/nemam-peniaze.webm"];
+
+const videos = ["videos/nemam-cas.webm", "videos/technicky-typ.webm", "videos/nemam-peniaze.webm"];
 
 const images = [
-  '/images/zhliadnutia-img.png',
-  '/images/kontakty-img.png',
-  '/images/sledovatelia-img.png',
+  'images/zhliadnutia-img.png',
+  'images/kontakty-img.png',
+  'images/sledovatelia-img.png',
   // add more as needed
 ];
 
 function startImageCycle() {
   const img = document.querySelector('.case__study__above__chart__visual img');
   let current = 0;
-
-
 
     setInterval(() => {
     current = (current + 1) % images.length;
@@ -49,7 +48,6 @@ function startImageCycle() {
 
 startImageCycle();
 
-
 const sections = [
     document.querySelector('section.hero'),
     document.querySelector('section.objections'),
@@ -57,7 +55,6 @@ const sections = [
     document.querySelector('section.services'),
     document.querySelector('section.offer'),
 ];
-
 
 function setActive(index) {
     // Clear all active classes in both menus
@@ -112,7 +109,6 @@ const observer = new IntersectionObserver((entries) => {
 sections.forEach(section => {
     if (section) observer.observe(section);
 });
-
 
 carouselItems.forEach((item) => {
     item.addEventListener("click", () => {
