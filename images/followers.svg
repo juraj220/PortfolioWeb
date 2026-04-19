@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:svg="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 682.7 682.7">
+  <defs>
+    <style>
+      .cls-1, .cls-2 {
+        fill: none;
+      }
+
+      .cls-2 {
+        stroke: #d99221;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 40px;
+      }
+
+      .cls-3 {
+        clip-path: url(#clippath);
+      }
+    </style>
+    <clipPath id="clippath">
+      <rect class="cls-1" width="682.7" height="682.7"/>
+    </clipPath>
+  </defs>
+  <!-- Generator: Adobe Illustrator 28.7.7, SVG Export Plug-In . SVG Version: 1.2.0 Build 194)  -->
+  <g>
+    <g id="Layer_1">
+      <g id="svg2328">
+        <g id="g2334">
+          <g id="g2336">
+            <g class="cls-3">
+              <g id="g2338">
+                <g id="g2344">
+                  <path id="path2346" class="cls-2" d="M449.3,168c0,81.7-66.3,148-148,148s-148-66.3-148-148S219.6,20,301.3,20s148,66.3,148,148Z"/>
+                </g>
+                <g id="g2348">
+                  <path id="path2350" class="cls-2" d="M661.3,422.7c0,66.3-53.7,120-120,120s-120-53.7-120-120,53.7-120,120-120,120,53.7,120,120Z"/>
+                </g>
+                <g id="g2352">
+                  <path id="path2354" class="cls-2" d="M501.3,422.7h80"/>
+                </g>
+                <g id="g2356">
+                  <path id="path2358" class="cls-2" d="M541.3,382.7v80"/>
+                </g>
+                <g id="g2360">
+                  <path id="path2362" class="cls-2" d="M442.6,354.5c-41.5-24.3-89.7-38.5-141.3-38.5-154.6,0-280,125.4-280,280v66.7h560v-66.7c0-20-2.2-39.5-6.2-58.3"/>
+                </g>
+              </g>
+            </g>
+          </g>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

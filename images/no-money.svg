@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 512 512">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+        stroke: #4321d9;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 30px;
+      }
+    </style>
+  </defs>
+  <!-- Generator: Adobe Illustrator 28.7.7, SVG Export Plug-In . SVG Version: 1.2.0 Build 194)  -->
+  <g>
+    <g id="Capa_1">
+      <g>
+        <g>
+          <polyline class="cls-1" points="344.7 437 497 437 497 377 344.7 377 167.3 377 15 377 15 437 167.3 437"/>
+          <polyline class="cls-1" points="344.7 437 497 437 497 497 344.7 497 167.3 497 15 497 15 437 167.3 437"/>
+          <polyline class="cls-1" points="361.9 123 497 123 497 377"/>
+          <polyline class="cls-1" points="15 377 15 123 150.1 123"/>
+        </g>
+        <g>
+          <circle class="cls-1" cx="256" cy="119" r="104"/>
+          <line class="cls-1" x1="283.7" y1="91.3" x2="228.3" y2="146.7"/>
+          <line class="cls-1" x1="228.3" y1="91.3" x2="283.7" y2="146.7"/>
+        </g>
+        <polyline class="cls-1" points="167.3 175.3 167.3 377 167.3 437 167.3 497"/>
+        <polyline class="cls-1" points="344.7 175.3 344.7 377 344.7 437 344.7 497"/>
+        <path class="cls-1" d="M430,123c0,37,30,67,67,67"/>
+        <path class="cls-1" d="M430,377c0-37,30-67,67-67"/>
+        <path class="cls-1" d="M15,190c37,0,67-30,67-67"/>
+        <path class="cls-1" d="M15,310c37,0,67,30,67,67"/>
+      </g>
+    </g>
+  </g>
+</svg>

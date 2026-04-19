@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:svg="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 682.7 682.7">
+  <defs>
+    <style>
+      .cls-1, .cls-2 {
+        fill: none;
+      }
+
+      .cls-2 {
+        stroke: #4321d9;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 40px;
+      }
+
+      .cls-3 {
+        clip-path: url(#clippath);
+      }
+    </style>
+    <clipPath id="clippath">
+      <rect class="cls-1" y="0" width="682.7" height="682.7"/>
+    </clipPath>
+  </defs>
+  <!-- Generator: Adobe Illustrator 28.7.7, SVG Export Plug-In . SVG Version: 1.2.0 Build 194)  -->
+  <g>
+    <g id="svg1827">
+      <g id="g1833">
+        <g id="g1835">
+          <g class="cls-3">
+            <g id="g1837">
+              <g id="g1843">
+                <path id="path1845" class="cls-2" d="M662.7,255.6c0-11.4-4.5-22.3-12.6-30.3-8-8-18.9-12.6-30.3-12.6H62.8c-11.4,0-22.3,4.5-30.3,12.6-8,8-12.6,18.9-12.6,30.3v64.3c0,11.4,4.5,22.3,12.6,30.3,8,8,18.9,12.6,30.3,12.6h557c11.4,0,22.3-4.5,30.3-12.6,8-8,12.6-18.9,12.6-30.3v-64.3Z"/>
+              </g>
+              <path id="path1847" class="cls-2" d="M255.6,362.8h171.4v-150h-171.4v150Z"/>
+              <path id="path1849" class="cls-2" d="M277.1,662.7h128.5v-299.9h-128.5v299.9Z"/>
+              <g id="g1851">
+                <path id="path1853" class="cls-2" d="M619.8,362.8H62.8v257.1c0,11.4,4.5,22.3,12.6,30.3,8,8,18.9,12.6,30.3,12.6h471.3c11.4,0,22.3-4.5,30.3-12.6,8-8,12.6-18.9,12.6-30.3v-257.1Z"/>
+              </g>
+              <g id="g1855">
+                <path id="path1857" class="cls-2" d="M341.3,212.8h-160.7c-53.2,0-96.4-43.2-96.4-96.4S127.4,20,180.7,20h9.5c83.5,0,151.1,67.7,151.1,151.1v41.7Z"/>
+              </g>
+              <g id="g1859">
+                <path id="path1861" class="cls-2" d="M341.3,212.8h160.7c53.2,0,96.4-43.2,96.4-96.4s-43.2-96.4-96.4-96.4h-9.5c-83.5,0-151.1,67.7-151.1,151.1v41.7Z"/>
+              </g>
+            </g>
+          </g>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>
