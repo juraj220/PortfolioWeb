@@ -22,19 +22,20 @@ const namietkyVideo = document.querySelector(".namietky-video");
 
 const offerCardBtn3 = document.querySelector(".offer__card__more__btn.premium")
 const offerCardOther3 = document.querySelector(".offer__card__other.premium")
-
-const videos = ["videos/nemam-cas.webm", "videos/technicky-typ.webm", "videos/nemam-peniaze.webm"];
+const videos = ["/videos/nemam-cas.mp4", "/videos/technicky-typ.mp4", "/videos/nemam-peniaze.mp4"];
 
 const images = [
-  'images/zhliadnutia-img.png',
-  'images/kontakty-img.png',
-  'images/sledovatelia-img.png',
+  '/images/zhliadnutia-img.png',
+  '/images/kontakty-img.png',
+  '/images/sledovatelia-img.png',
   // add more as needed
 ];
 
 function startImageCycle() {
   const img = document.querySelector('.case__study__above__chart__visual img');
   let current = 0;
+
+
 
     setInterval(() => {
     current = (current + 1) % images.length;
@@ -48,6 +49,7 @@ function startImageCycle() {
 
 startImageCycle();
 
+
 const sections = [
     document.querySelector('section.hero'),
     document.querySelector('section.objections'),
@@ -55,6 +57,7 @@ const sections = [
     document.querySelector('section.services'),
     document.querySelector('section.offer'),
 ];
+
 
 function setActive(index) {
     // Clear all active classes in both menus
@@ -109,6 +112,7 @@ const observer = new IntersectionObserver((entries) => {
 sections.forEach(section => {
     if (section) observer.observe(section);
 });
+
 
 carouselItems.forEach((item) => {
     item.addEventListener("click", () => {
@@ -221,11 +225,11 @@ function applyState() {
   
   panels.forEach((p, index) => {
     const video = p.querySelector("video");
-    if (index === 1) { // Middle Panel (New active video)
+    if (index === 1) {
       p.style.filter = "none";
       p.style.zIndex = "2";
       activatePanel(video);
-      video.onended = shift; // Trigger next shift when done
+      video.onended = shift;
     } else {
       p.style.filter = "blur(10px)";
       p.style.zIndex = "1";
@@ -239,33 +243,22 @@ function shift() {
   const panels = Array.from(heroVisual.querySelectorAll(".mobile-panel"));
   const [p1, p2, p3] = panels;
 
-  // Get current coordinates
   const r1 = p1.getBoundingClientRect();
   const r2 = p2.getBoundingClientRect();
   const r3 = p3.getBoundingClientRect();
 
-  // 1. Prepare transitions
   [p1, p2, p3].forEach(p => {
     p.style.transition = `transform ${DURATION}ms ${EASING}, filter ${DURATION}ms, opacity ${DURATION}ms`;
   });
 
-  // 2. The Move (Reverse Direction):
-  // p2 (mid) moves to p3 (right)
   p2.style.transform = `translate(${r3.left - r2.left}px, ${r3.top - r2.top}px)`;
-  
-  // p1 (left) moves to p2 (mid)
   p1.style.transform = `translate(${r2.left - r1.left}px, ${r2.top - r1.top}px)`;
-
-  // p3 (right) "recycles" by dropping out and moving to the p1 (left) position
   p3.style.transform = `translateY(${window.innerHeight}px)`;
   p3.style.opacity = "0";
 
   setTimeout(() => {
-    // 3. Reorder DOM: Move the last element (p3) to the very start
-    // This makes the former "right" panel the new "left" panel
     heroVisual.prepend(p3);
 
-    // 4. Reset Styles for the new DOM positions
     const newPanels = Array.from(heroVisual.querySelectorAll(".mobile-panel"));
     newPanels.forEach(p => {
       p.style.transition = "none";
@@ -273,21 +266,35 @@ function shift() {
       p.style.opacity = "1";
     });
 
-    // 5. Update visuals and activate the new middle video
     applyState();
   }, DURATION);
 }
 
-// Initial setup
+function waitForVideos() {
+  const videos = Array.from(heroVisual.querySelectorAll("video"));
+
+  const videoPromises = videos.map(v => {
+    if (v.readyState >= 3) return Promise.resolve();
+
+    return new Promise(resolve => {
+      v.addEventListener("canplaythrough", resolve, { once: true });
+    });
+  });
+
+  return Promise.all(videoPromises);
+}
+
 function init() {
-  // Ensure videos are ready
   const videos = heroVisual.querySelectorAll("video");
   videos.forEach(v => {
     v.muted = true;
     v.setAttribute("playsinline", "");
+    v.load();
   });
-  
-  applyState();
+
+  waitForVideos().then(() => {
+    applyState();
+  });
 }
 
 init();
