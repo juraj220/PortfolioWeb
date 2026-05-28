@@ -116,7 +116,7 @@ sections.forEach(section => {
 
 carouselItems.forEach((item) => {
     item.addEventListener("click", () => {
-        if (item.classList.contains("active")){
+        if (item.classList.contains("active")) {
         }
         else {
             carouselItems.forEach((i) => {
@@ -125,7 +125,8 @@ carouselItems.forEach((item) => {
             item.classList.add("active");
             let videoItem = Array.from(carouselItems).indexOf(item);
             namietkyVideo.src = videos[videoItem];
-
+            namietkyVideo.load();
+            namietkyVideo.muted = true;
         }
     });
 });
